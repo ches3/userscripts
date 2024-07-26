@@ -15,6 +15,7 @@
 // @match        *://www.unitedcinemas.jp/*
 // @match        *://cinema.aeoncinema.com/*
 // @match        *://cinema.korona.co.jp/*
+// @match        *://www.cinequinto-ticket.jp/*
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        none
 // ==/UserScript==
@@ -246,6 +247,12 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
             mutationSelector: ".tab_content-wrap",
             workSelector: ".content-item",
             titleSelector: ".title",
+            functions: [],
+        },
+        {
+            host: "www.cinequinto-ticket.jp",
+            workSelector: ".movie-panel",
+            titleSelector: ".title-jp",
             functions: [],
         },
     ];
