@@ -39,6 +39,10 @@ buildディレクトリにコンパイルしたjsファイルが置いてあり�
 - ページタイトルを `{タイトル} {サブタイトル} | U-NEXT` にする
 - 次のエピソードへの遷移を3秒に短縮
 
+### wikipedia-redirect-mobile-page
+[インストール](https://github.com/ches3/userscripts/raw/main/build/wikipedia-redirect-mobile-page.user.js)
+- Wikipediaのモバイル版ページを通常版ページにリダイレクトする
+
 ### x-remove-params
 [インストール](https://github.com/ches3/userscripts/raw/main/build/x-remove-params.user.js)
 - ツイートページの余計なパラメータを削除する ( `s=XXXXXXXX` と `t=XXXXXXXX` )
