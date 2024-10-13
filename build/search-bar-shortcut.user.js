@@ -18,6 +18,7 @@
 // @match        https://www.gsmarena.com//*
 // @match        https://ahkwiki.net/*
 // @match        https://beatsaver.com/*
+// @match        https://tv.dmm.com/*
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        none
 // ==/UserScript==
@@ -83,6 +84,10 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         {
             host: "beatsaver.com",
             selector: ".form-control",
+        },
+        {
+            host: "tv.dmm.com",
+            selector: '[name="keyword"]',
         },
     ];
     const asyncQuerySelector = (selector, timeout = 10000) => {
