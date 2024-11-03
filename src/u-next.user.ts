@@ -69,19 +69,17 @@
 		episode = (await asyncQuerySelector("h3")).innerHTML;
 		document.title = `${title} ${episode} | U-NEXT`;
 
-		// 次のエピソードへの遷移を3秒に短縮
+		// 次のエピソードへ即時遷移する
 		const videoElem = await asyncQuerySelector("video");
 		videoElem.addEventListener("ended", () => {
-			setTimeout(() => {
-				const skipElem = document.querySelector(
-					".sc-hwdzOV.bltSIJ .sc-fUnMCh.eFKecd .sc-hzhJZQ",
-				);
-				if (!(skipElem instanceof HTMLElement)) {
-					console.error("UserScript error: skipElem not found.");
-					return;
-				}
-				skipElem.click();
-			}, 3000);
+			const skipElem = document.querySelector(
+				`[src^="//imgc.nxtv.jp/img/info/eps/"]:has(svg)`,
+			);
+			if (!(skipElem instanceof HTMLElement)) {
+				console.error("UserScript error: skipElem not found.");
+				return;
+			}
+			skipElem.click();
 		});
 	}, 1000);
 })();
