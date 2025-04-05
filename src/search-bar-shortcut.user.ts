@@ -18,6 +18,7 @@
 // @match        https://ahkwiki.net/*
 // @match        https://beatsaver.com/*
 // @match        https://tv.dmm.com/*
+// @match        https://www.futbin.com/*
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        none
 // ==/UserScript==
@@ -79,6 +80,10 @@
 		{
 			host: "tv.dmm.com",
 			selector: '[name="keyword"]',
+		},
+		{
+			host: "www.futbin.com",
+			selector: ".og-search-input",
 		},
 	];
 

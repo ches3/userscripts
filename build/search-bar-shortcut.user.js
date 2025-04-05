@@ -19,6 +19,7 @@
 // @match        https://ahkwiki.net/*
 // @match        https://beatsaver.com/*
 // @match        https://tv.dmm.com/*
+// @match        https://www.futbin.com/*
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        none
 // ==/UserScript==
@@ -88,6 +89,10 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         {
             host: "tv.dmm.com",
             selector: '[name="keyword"]',
+        },
+        {
+            host: "www.futbin.com",
+            selector: ".og-search-input",
         },
     ];
     const asyncQuerySelector = (selector, timeout = 10000) => {
