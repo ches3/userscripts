@@ -15,6 +15,7 @@
 // @match        *://cinema.aeoncinema.com/*
 // @match        *://cinema.korona.co.jp/*
 // @match        *://www.cinequinto-ticket.jp/*
+// @match				 *://rosa10.cineticket.jp/theater/keisei/schedule*
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        none
 // ==/UserScript==
@@ -266,6 +267,12 @@
 		},
 		{
 			host: "www.cinequinto-ticket.jp",
+			workSelector: ".movie-panel",
+			titleSelector: ".title-jp",
+			functions: [],
+		},
+		{
+			host: "rosa10.cineticket.jp",
 			workSelector: ".movie-panel",
 			titleSelector: ".title-jp",
 			functions: [],
