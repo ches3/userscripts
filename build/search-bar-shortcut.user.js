@@ -14,8 +14,8 @@
 // @match        https://sm.rakuten.co.jp/*
 // @match        https://www.rakuten.co.jp/*
 // @match        https://annict.com/*
-// @match        https://www.mau2.com//*
-// @match        https://www.gsmarena.com//*
+// @match        https://www.mau2.com/*
+// @match        https://www.gsmarena.com/*
 // @match        https://ahkwiki.net/*
 // @match        https://beatsaver.com/*
 // @match        https://tv.dmm.com/*
