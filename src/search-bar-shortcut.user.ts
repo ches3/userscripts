@@ -47,7 +47,7 @@
 		},
 		{
 			host: "video.unext.jp",
-			selector: '[data-ucn="search-control-input"]',
+			selector: '[data-ucn="search-searchBox-input"]',
 		},
 		{
 			host: "sm.rakuten.co.jp",

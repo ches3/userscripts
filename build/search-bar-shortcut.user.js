@@ -56,7 +56,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         },
         {
             host: "video.unext.jp",
-            selector: '[data-ucn="search-control-input"]',
+            selector: '[data-ucn="search-searchBox-input"]',
         },
         {
             host: "sm.rakuten.co.jp",
