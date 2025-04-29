@@ -137,6 +137,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         if ("TEXTAREA" === (activeElement === null || activeElement === void 0 ? void 0 : activeElement.tagName)) {
             return;
         }
+        searchInput.click();
         searchInput.focus();
         e.preventDefault();
     });

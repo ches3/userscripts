@@ -136,6 +136,7 @@
 			return;
 		}
 
+		searchInput.click();
 		searchInput.focus();
 		e.preventDefault();
 	});
