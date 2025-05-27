@@ -89,6 +89,7 @@
 		"＝LOVE",
 		"=LOVE",
 		"鬼滅の刃",
+		"サイダーのように言葉が湧き上がる",
 	];
 
 	const isInclude = (title: string) => {
