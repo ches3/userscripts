@@ -99,6 +99,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         "=LOVE",
         "鬼滅の刃",
         "サイダーのように言葉が湧き上がる",
+        "小林さんちのメイドラゴン",
+        "F1"
     ];
     const isInclude = (title) => {
         const normalizedTitle = zenToHan(title);
