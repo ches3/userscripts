@@ -100,7 +100,14 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         "鬼滅の刃",
         "サイダーのように言葉が湧き上がる",
         "小林さんちのメイドラゴン",
-        "F1"
+        "F1",
+        "≠ME THE MOVIE",
+        "不思議の国でアリスと",
+        "チェンソーマン",
+        "ゾンビランドサガ",
+        "羅小黒戦記",
+        "わたしが恋人になれるわけないじゃん",
+        "果てしなきスカーレット",
     ];
     const isInclude = (title) => {
         const normalizedTitle = zenToHan(title);
