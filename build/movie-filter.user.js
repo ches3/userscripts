@@ -164,12 +164,6 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
                 .querySelector("section:not([hide]) .panel")) === null || _a === void 0 ? void 0 : _a.setAttribute("style", "display:block;");
         }
     };
-    const cinecittaHideBetween = () => {
-        const betweens = document.querySelectorAll(".between");
-        for (const between of betweens) {
-            between.setAttribute("style", "display:none;");
-        }
-    };
     const asyncQuerySelector = (selector, timeout = 10000) => {
         return new Promise((resolve, reject) => {
             const intervalID = setInterval(() => {
@@ -237,10 +231,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         },
         {
             host: "cinecitta.co.jp",
-            mutationSelector: "#displayPortalArea",
-            workSelector: ".scheduleBox",
-            titleSelector: "a",
-            functions: [cinecittaHideBetween],
+            workSelector: ".sche_cine_list_block",
+            titleSelector: ".sche_cine_list_title",
+            functions: [],
         },
         {
             host: "www.cinemasunshine.co.jp",
@@ -302,6 +295,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         });
         observer.observe(target, {
             childList: true,
+            subtree: true,
         });
     }
     document.addEventListener("keydown", (e) => {

@@ -164,14 +164,6 @@
 		}
 	};
 
-	const cinecittaHideBetween = () => {
-		const betweens = document.querySelectorAll(".between");
-
-		for (const between of betweens) {
-			between.setAttribute("style", "display:none;");
-		}
-	};
-
 	const asyncQuerySelector = (selector: string, timeout = 10000) => {
 		return new Promise<Element>((resolve, reject) => {
 			const intervalID = setInterval(() => {
@@ -244,10 +236,9 @@
 		},
 		{
 			host: "cinecitta.co.jp",
-			mutationSelector: "#displayPortalArea",
-			workSelector: ".scheduleBox",
-			titleSelector: "a",
-			functions: [cinecittaHideBetween],
+			workSelector: ".sche_cine_list_block",
+			titleSelector: ".sche_cine_list_title",
+			functions: [],
 		},
 		{
 			host: "www.cinemasunshine.co.jp",
@@ -312,6 +303,7 @@
 		});
 		observer.observe(target, {
 			childList: true,
+			subtree: true,
 		});
 	}
 
