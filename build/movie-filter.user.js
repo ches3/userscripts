@@ -20,16 +20,7 @@
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        none
 // ==/UserScript==
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-(() => __awaiter(void 0, void 0, void 0, function* () {
+(async () => {
     const titleList = [
         "(イベント版)",
         "かがみの孤城",
@@ -118,11 +109,10 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         }
         return false;
     };
-    const addFilterAttribute = (workSelector, titleSelector) => __awaiter(void 0, void 0, void 0, function* () {
-        var _a;
-        const items = yield asyncQuerySelectorAll(workSelector);
+    const addFilterAttribute = async (workSelector, titleSelector) => {
+        const items = await asyncQuerySelectorAll(workSelector);
         for (const item of items) {
-            const item_title = (_a = item.querySelector(titleSelector)) === null || _a === void 0 ? void 0 : _a.textContent;
+            const item_title = item.querySelector(titleSelector)?.textContent;
             if (!item_title) {
                 continue;
             }
@@ -131,7 +121,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
             }
             item.setAttribute("hide", "");
         }
-    });
+    };
     const appendStyle = () => {
         const style = document.createElement("style");
         style.textContent = `[filter="true"] [hide] { display: none; }`;
@@ -157,11 +147,11 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         elem.setAttribute("filter", value ? "true" : "false");
     };
     const tjoyOpener = () => {
-        var _a;
         const works = document.querySelectorAll("section");
         for (const work of works) {
-            (_a = work
-                .querySelector("section:not([hide]) .panel")) === null || _a === void 0 ? void 0 : _a.setAttribute("style", "display:block;");
+            work
+                .querySelector("section:not([hide]) .panel")
+                ?.setAttribute("style", "display:block;");
         }
     };
     const asyncQuerySelector = (selector, timeout = 10000) => {
@@ -288,7 +278,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     addFilterAttribute(theater.workSelector, theater.titleSelector);
     appendStyle();
     if (theater.mutationSelector) {
-        const target = yield asyncQuerySelector(theater.mutationSelector);
+        const target = await asyncQuerySelector(theater.mutationSelector);
         const observer = new MutationObserver(() => {
             setFilter(false);
             addFilterAttribute(theater.workSelector, theater.titleSelector);
@@ -306,4 +296,4 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
             }
         }
     });
-}))();
+})();

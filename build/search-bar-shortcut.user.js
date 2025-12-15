@@ -24,16 +24,7 @@
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        none
 // ==/UserScript==
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-(() => __awaiter(void 0, void 0, void 0, function* () {
+(async () => {
     const dict = [
         {
             host: "wikipedia.org",
@@ -115,18 +106,18 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
             }, timeout);
         });
     };
-    const getInputElement = () => __awaiter(void 0, void 0, void 0, function* () {
+    const getInputElement = async () => {
         const item = dict.find((item) => location.hostname === item.host);
         if (!item) {
             return;
         }
-        const elem = yield asyncQuerySelector(item.selector);
+        const elem = await asyncQuerySelector(item.selector);
         if (!(elem instanceof HTMLInputElement)) {
             return;
         }
         return elem;
-    });
-    const searchInput = yield getInputElement();
+    };
+    const searchInput = await getInputElement();
     if (!searchInput) {
         console.error("Input element not found.");
         return;
@@ -136,14 +127,14 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
             return;
         }
         const activeElement = document.activeElement;
-        if ("INPUT" === (activeElement === null || activeElement === void 0 ? void 0 : activeElement.tagName)) {
+        if ("INPUT" === activeElement?.tagName) {
             return;
         }
-        if ("TEXTAREA" === (activeElement === null || activeElement === void 0 ? void 0 : activeElement.tagName)) {
+        if ("TEXTAREA" === activeElement?.tagName) {
             return;
         }
         searchInput.click();
         searchInput.focus();
         e.preventDefault();
     });
-}))();
+})();

@@ -10,16 +10,7 @@
 // @run-at       document-body
 // @grant        none
 // ==/UserScript==
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-const getUrl = (title) => __awaiter(void 0, void 0, void 0, function* () {
+const getUrl = async (title) => {
     const endpoint = "https://ja.wikipedia.org/w/api.php";
     const params = new URLSearchParams({
         action: "query",
@@ -27,16 +18,16 @@ const getUrl = (title) => __awaiter(void 0, void 0, void 0, function* () {
         format: "json",
         origin: "*",
     });
-    const res = yield fetch(`${endpoint}?${params.toString()}`);
+    const res = await fetch(`${endpoint}?${params.toString()}`);
     if (!res.ok) {
         return;
     }
-    const json = yield res.json();
+    const json = await res.json();
     if ("-1" in json.query.pages) {
         return;
     }
     return `https://ja.wikipedia.org/wiki/${title.replace(/ /g, "_")}`;
-});
+};
 const createElement = (href) => {
     const svg = `
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" style="height: 1em; width: 1em; padding: 0.2em;" fill="currentColor">
@@ -54,14 +45,13 @@ const createElement = (href) => {
   `;
     return elem;
 };
-(() => __awaiter(void 0, void 0, void 0, function* () {
-    var _a;
+(async () => {
     // URLを取得
-    const name = (_a = document.querySelector("h1")) === null || _a === void 0 ? void 0 : _a.textContent;
+    const name = document.querySelector("h1")?.textContent;
     if (!name) {
         return;
     }
-    const href = (yield getUrl(`${name} (声優)`)) || (yield getUrl(name));
+    const href = (await getUrl(`${name} (声優)`)) || (await getUrl(name));
     if (!href) {
         return;
     }
@@ -76,4 +66,4 @@ const createElement = (href) => {
         return;
     }
     parentElem.insertBefore(elem, birthdayElem);
-}))();
+})();

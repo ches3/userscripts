@@ -122,10 +122,9 @@
         }
     };
     const theaterFilter = () => {
-        var _a;
         const theaterElemList = document.querySelectorAll(".theater_list table tbody tr");
         for (const theaterElem of theaterElemList) {
-            const item_title = (_a = theaterElem.querySelector(".theater_name")) === null || _a === void 0 ? void 0 : _a.textContent;
+            const item_title = theaterElem.querySelector(".theater_name")?.textContent;
             if (!item_title) {
                 continue;
             }

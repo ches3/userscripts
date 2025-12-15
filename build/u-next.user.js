@@ -9,15 +9,6 @@
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=video.unext.jp
 // @grant        none
 // ==/UserScript==
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
 (() => {
     const asyncQuerySelector = (selector, timeout = 10000) => {
         return new Promise((resolve, reject) => {
@@ -43,7 +34,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
             document.title = `${title} ${episode} | U-NEXT`;
         }
     }, 1000);
-    setInterval(() => __awaiter(void 0, void 0, void 0, function* () {
+    setInterval(async () => {
         if (currentURL === location.href) {
             return;
         }
@@ -54,8 +45,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
             return;
         }
         // ダブルクリックでフルスクリーン切り替え
-        const videoParent = yield asyncQuerySelector("#videoFullScreenWrapper");
-        const fullscreenButton = yield asyncQuerySelector('[data-ucn="player-windowControl-fullScreen"]');
+        const videoParent = await asyncQuerySelector("#videoFullScreenWrapper");
+        const fullscreenButton = await asyncQuerySelector('[data-ucn="player-windowControl-fullScreen"]');
         if (!(fullscreenButton instanceof HTMLButtonElement)) {
             console.error("UserScript error: fullscreenButton is not HTMLButtonElement.");
             return;
@@ -64,11 +55,11 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
             fullscreenButton.click();
         });
         // 作品タイトルをページタイトルに設定
-        title = (yield asyncQuerySelector("h2")).innerHTML;
-        episode = (yield asyncQuerySelector("h3")).innerHTML;
+        title = (await asyncQuerySelector("h2")).innerHTML;
+        episode = (await asyncQuerySelector("h3")).innerHTML;
         document.title = `${title} ${episode} | U-NEXT`;
         // 次のエピソードへ即時遷移する
-        const videoElem = yield asyncQuerySelector("video");
+        const videoElem = await asyncQuerySelector("video");
         videoElem.addEventListener("ended", () => {
             const skipElem = document.querySelector(`[src^="//imgc.nxtv.jp/img/info/eps/"]:has(svg)`);
             if (!(skipElem instanceof HTMLElement)) {
@@ -77,5 +68,5 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
             }
             skipElem.click();
         });
-    }), 1000);
+    }, 1000);
 })();

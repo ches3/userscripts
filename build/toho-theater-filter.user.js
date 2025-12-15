@@ -141,10 +141,9 @@
         }
     };
     const filter = () => {
-        var _a;
         const theaterElemList = document.querySelectorAll("#region3 table tbody tr");
         for (const theaterElem of theaterElemList) {
-            const item_title = (_a = theaterElem.querySelector("a")) === null || _a === void 0 ? void 0 : _a.textContent;
+            const item_title = theaterElem.querySelector("a")?.textContent;
             if (!item_title) {
                 continue;
             }
