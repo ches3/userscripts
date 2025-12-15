@@ -32,7 +32,7 @@
         // 着席率を計算（販売数÷座席数）
         const salesNum = Number.parseInt(sales.replace(/^\*+/, ""), 10);
         const seatsNum = Number.parseInt(seats.replace(/^\*+/, ""), 10);
-        const occupancy = seatsNum > 0 ? ((salesNum / seatsNum) * 100).toFixed(1) + "%" : "-";
+        const occupancy = seatsNum > 0 ? `${((salesNum / seatsNum) * 100).toFixed(1)}%` : "-";
         // カラム幅を揃える
         const formattedRank = rank.replace(/^\*/, "").padStart(4, " ");
         const formattedSales = formatNumber(sales).padStart(9, " ");
