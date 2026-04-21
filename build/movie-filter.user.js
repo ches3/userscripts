@@ -111,6 +111,7 @@
         "パリに咲くエトワール",
         "魔法科高校の劣等生",
         "花緑青が明ける日に",
+        "プロジェクト・ヘイル・メアリー",
     ];
     const isInclude = (title) => {
         const normalizedTitle = zenToHan(title);
