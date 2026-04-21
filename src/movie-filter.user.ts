@@ -115,9 +115,9 @@
 	];
 
 	const isInclude = (title: string) => {
-		const normalizedTitle = zenToHan(title);
+		const normalizedTitle = title.normalize("NFKC");
 		for (const t of titleList) {
-			if (normalizedTitle.includes(zenToHan(t))) {
+			if (normalizedTitle.includes(t.normalize("NFKC"))) {
 				return true;
 			}
 		}
@@ -209,14 +209,6 @@
 				reject(new Error(`Timeout: ${selector}`));
 			}, timeout);
 		});
-	};
-
-	const zenToHan = (str: string) => {
-		return str
-			.replace(/[Ａ-Ｚａ-ｚ０-９]/g, (s) => {
-				return String.fromCharCode(s.charCodeAt(0) - 0xfee0);
-			})
-			.replace(/　/g, " ");
 	};
 
 	const theaterDict = [
