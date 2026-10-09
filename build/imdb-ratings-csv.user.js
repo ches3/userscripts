@@ -51,25 +51,17 @@
             .querySelector(".dli-user-list-item-date-added")
             ?.textContent?.trim()
             .replace(/^Rated on\s*/i, "") ?? "";
-        const meta = [
-            ...item.querySelectorAll("ul.ipc-inline-list li.ipc-inline-list__item"),
-        ].map((el) => el.textContent?.trim() ?? "");
+        const meta = [...item.querySelectorAll("ul.ipc-inline-list li.ipc-inline-list__item")].map((el) => el.textContent?.trim() ?? "");
         const imdbRatingEl = item.querySelector('[data-testid="ratingGroup--imdb-rating"]');
-        const imdbRating = imdbRatingEl
-            ?.getAttribute("aria-label")
-            ?.match(/IMDb rating:\s*([\d.]+)/i)?.[1] ??
-            imdbRatingEl
-                ?.querySelector(".ipc-rating-star--rating")
-                ?.textContent?.trim() ??
+        const imdbRating = imdbRatingEl?.getAttribute("aria-label")?.match(/IMDb rating:\s*([\d.]+)/i)?.[1] ??
+            imdbRatingEl?.querySelector(".ipc-rating-star--rating")?.textContent?.trim() ??
             "";
         const myRating = item
             .querySelector('[data-testid="rate-button"]')
             ?.getAttribute("aria-label")
             ?.replace(/^Your rating:\s*/i, "")
             .trim() ?? "";
-        const nameLinks = [
-            ...item.querySelectorAll('a[href*="/name/"]'),
-        ];
+        const nameLinks = [...item.querySelectorAll('a[href*="/name/"]')];
         const directors = nameLinks
             .filter((a) => /ref_=rt_li_1_/.test(a.getAttribute("href") ?? ""))
             .map((a) => a.textContent?.trim() ?? "")

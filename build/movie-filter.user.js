@@ -162,9 +162,7 @@
     const tjoyOpener = () => {
         const works = document.querySelectorAll("section");
         for (const work of works) {
-            work
-                .querySelector("section:not([hide]) .panel")
-                ?.setAttribute("style", "display:block;");
+            work.querySelector("section:not([hide]) .panel")?.setAttribute("style", "display:block;");
         }
     };
     const asyncQuerySelector = (selector, timeout = 10000) => {

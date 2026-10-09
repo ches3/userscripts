@@ -49,8 +49,7 @@
         if (!focusedElement) {
             return;
         }
-        if (focusedElement.tagName === "INPUT" ||
-            focusedElement.tagName === "TEXTAREA") {
+        if (focusedElement.tagName === "INPUT" || focusedElement.tagName === "TEXTAREA") {
             return;
         }
         if (e.key === " ") {

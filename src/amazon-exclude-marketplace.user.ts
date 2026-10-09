@@ -10,9 +10,9 @@
 // ==/UserScript==
 
 (() => {
-	document.addEventListener("keydown", (e) => {
-		if (e.ctrlKey && e.key === "q") {
-			location.href = `${location.href}&emi=AN1VRQENFRJN5`;
-		}
-	});
+  document.addEventListener("keydown", (e) => {
+    if (e.ctrlKey && e.key === "q") {
+      location.href = `${location.href}&emi=AN1VRQENFRJN5`;
+    }
+  });
 })();

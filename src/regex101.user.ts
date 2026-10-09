@@ -11,10 +11,10 @@
 // ==/UserScript==
 
 (() => {
-	Object.defineProperty(window, "onbeforeunload", {
-		configurable: true,
-		enumerable: true,
-		get: () => null,
-		set: () => {},
-	});
+  Object.defineProperty(window, "onbeforeunload", {
+    configurable: true,
+    enumerable: true,
+    get: () => null,
+    set: () => {},
+  });
 })();

@@ -10,47 +10,47 @@
 // ==/UserScript==
 
 (() => {
-	// フィルタリング対象のタイトルパターン
-	const patterns = [
-		/^（独立系を含む）土日合算ランキング：/,
-		/^（独立系を含む）デイリー合算ランキング：/,
-		/^（独立系を含む）週間合算ランキング：/,
-	];
+  // フィルタリング対象のタイトルパターン
+  const patterns = [
+    /^（独立系を含む）土日合算ランキング：/,
+    /^（独立系を含む）デイリー合算ランキング：/,
+    /^（独立系を含む）週間合算ランキング：/,
+  ];
 
-	let isFiltered = false;
+  let isFiltered = false;
 
-	const toggleFilter = () => {
-		isFiltered = !isFiltered;
+  const toggleFilter = () => {
+    isFiltered = !isFiltered;
 
-		// 記事リストの各アイテムを取得
-		const items = document.querySelectorAll<HTMLElement>(".list_body > li");
+    // 記事リストの各アイテムを取得
+    const items = document.querySelectorAll<HTMLElement>(".list_body > li");
 
-		for (const item of items) {
-			const link = item.querySelector("a");
-			if (!link) continue;
+    for (const item of items) {
+      const link = item.querySelector("a");
+      if (!link) continue;
 
-			const title = link.textContent?.trim() || "";
-			const matches = patterns.some((pattern) => pattern.test(title));
+      const title = link.textContent?.trim() || "";
+      const matches = patterns.some((pattern) => pattern.test(title));
 
-			if (isFiltered) {
-				// フィルタON: マッチしないものを非表示
-				item.style.display = matches ? "" : "none";
-			} else {
-				// フィルタOFF: すべて表示
-				item.style.display = "";
-			}
-		}
+      if (isFiltered) {
+        // フィルタON: マッチしないものを非表示
+        item.style.display = matches ? "" : "none";
+      } else {
+        // フィルタOFF: すべて表示
+        item.style.display = "";
+      }
+    }
 
-		// ステータス表示
-		showStatus(isFiltered ? "フィルタ ON" : "フィルタ OFF");
-	};
+    // ステータス表示
+    showStatus(isFiltered ? "フィルタ ON" : "フィルタ OFF");
+  };
 
-	const showStatus = (message: string) => {
-		let statusElem = document.getElementById("mimorin-filter-status");
-		if (!statusElem) {
-			statusElem = document.createElement("div");
-			statusElem.id = "mimorin-filter-status";
-			statusElem.style.cssText = `
+  const showStatus = (message: string) => {
+    let statusElem = document.getElementById("mimorin-filter-status");
+    if (!statusElem) {
+      statusElem = document.createElement("div");
+      statusElem.id = "mimorin-filter-status";
+      statusElem.style.cssText = `
 				position: fixed;
 				top: 20px;
 				right: 20px;
@@ -62,22 +62,22 @@
 				z-index: 10000;
 				transition: opacity 0.3s;
 			`;
-			document.body.appendChild(statusElem);
-		}
+      document.body.appendChild(statusElem);
+    }
 
-		statusElem.textContent = message;
-		statusElem.style.opacity = "1";
+    statusElem.textContent = message;
+    statusElem.style.opacity = "1";
 
-		setTimeout(() => {
-			statusElem.style.opacity = "0";
-		}, 1000);
-	};
+    setTimeout(() => {
+      statusElem.style.opacity = "0";
+    }, 1000);
+  };
 
-	// キーボードショートカット
-	document.addEventListener("keydown", (e) => {
-		if (e.ctrlKey && e.key === "q") {
-			e.preventDefault();
-			toggleFilter();
-		}
-	});
+  // キーボードショートカット
+  document.addEventListener("keydown", (e) => {
+    if (e.ctrlKey && e.key === "q") {
+      e.preventDefault();
+      toggleFilter();
+    }
+  });
 })();

@@ -11,17 +11,17 @@
 // ==/UserScript==
 
 (() => {
-	const removeParams = ["t", "s", "ref_src", "ref_url"];
+  const removeParams = ["t", "s", "ref_src", "ref_url"];
 
-	const searchParams = new URLSearchParams(location.search);
-	if (!removeParams.some(param => searchParams.get(param))) {
-		return;
-	}
+  const searchParams = new URLSearchParams(location.search);
+  if (!removeParams.some((param) => searchParams.get(param))) {
+    return;
+  }
 
-	for (const param of removeParams) {
-		searchParams.delete(param);
-	}
+  for (const param of removeParams) {
+    searchParams.delete(param);
+  }
 
-	const newHref = location.pathname + searchParams.toString();
-	window.history.replaceState({}, "", newHref);
+  const newHref = location.pathname + searchParams.toString();
+  window.history.replaceState({}, "", newHref);
 })();

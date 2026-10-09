@@ -10,19 +10,16 @@
 // ==/UserScript==
 
 (() => {
-	const isMobile = () => {
-		const regex = /iPhone|Android.+Mobile/i;
-		return regex.test(navigator.userAgent);
-	};
+  const isMobile = () => {
+    const regex = /iPhone|Android.+Mobile/i;
+    return regex.test(navigator.userAgent);
+  };
 
-	if (isMobile()) {
-		return;
-	}
-	if (location.hostname.match(/\.m\.wikipedia\.org$/)) {
-		const newHostname = location.hostname.replace(
-			/\.m\.wikipedia\.org$/,
-			".wikipedia.org",
-		);
-		location.hostname = newHostname;
-	}
+  if (isMobile()) {
+    return;
+  }
+  if (location.hostname.match(/\.m\.wikipedia\.org$/)) {
+    const newHostname = location.hostname.replace(/\.m\.wikipedia\.org$/, ".wikipedia.org");
+    location.hostname = newHostname;
+  }
 })();

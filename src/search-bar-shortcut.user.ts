@@ -25,124 +25,124 @@
 // ==/UserScript==
 
 (async () => {
-	const dict = [
-		{
-			host: "wikipedia.org",
-			selector: '[name="search"]',
-		},
-		{
-			host: "www.amazon.co.jp",
-			selector: "#twotabsearchtextbox",
-		},
-		{
-			host: "www.amazon.com",
-			selector: "#twotabsearchtextbox",
-		},
-		{
-			host: "mail.google.com",
-			selector: "input[name=q]",
-		},
-		{
-			host: "ruijianime.com",
-			selector: "#srchanime",
-		},
-		{
-			host: "video.unext.jp",
-			selector: '[data-ucn="search-searchBox-input"]',
-		},
-		{
-			host: "sm.rakuten.co.jp",
-			selector: "#topSearchKeyword",
-		},
-		{
-			host: "www.rakuten.co.jp",
-			selector: "#common-header-search-input",
-		},
-		{
-			host: "annict.com",
-			selector: "#q",
-		},
-		{
-			host: "www.mau2.com",
-			selector: ".searchQ",
-		},
-		{
-			host: "www.gsmarena.com",
-			selector: "#topsearch-text",
-		},
-		{
-			host: "ahkwiki.net",
-			selector: "#searchInput",
-		},
-		{
-			host: "beatsaver.com",
-			selector: ".form-control",
-		},
-		{
-			host: "tv.dmm.com",
-			selector: '[name="keyword"]',
-		},
-		{
-			host: "www.futbin.com",
-			selector: ".og-search-input",
-		},
-		{
-			host: "w.atwiki.jp",
-			selector: '.atwiki_headbar_search input[name="keyword"]',
-		},
-	];
+  const dict = [
+    {
+      host: "wikipedia.org",
+      selector: '[name="search"]',
+    },
+    {
+      host: "www.amazon.co.jp",
+      selector: "#twotabsearchtextbox",
+    },
+    {
+      host: "www.amazon.com",
+      selector: "#twotabsearchtextbox",
+    },
+    {
+      host: "mail.google.com",
+      selector: "input[name=q]",
+    },
+    {
+      host: "ruijianime.com",
+      selector: "#srchanime",
+    },
+    {
+      host: "video.unext.jp",
+      selector: '[data-ucn="search-searchBox-input"]',
+    },
+    {
+      host: "sm.rakuten.co.jp",
+      selector: "#topSearchKeyword",
+    },
+    {
+      host: "www.rakuten.co.jp",
+      selector: "#common-header-search-input",
+    },
+    {
+      host: "annict.com",
+      selector: "#q",
+    },
+    {
+      host: "www.mau2.com",
+      selector: ".searchQ",
+    },
+    {
+      host: "www.gsmarena.com",
+      selector: "#topsearch-text",
+    },
+    {
+      host: "ahkwiki.net",
+      selector: "#searchInput",
+    },
+    {
+      host: "beatsaver.com",
+      selector: ".form-control",
+    },
+    {
+      host: "tv.dmm.com",
+      selector: '[name="keyword"]',
+    },
+    {
+      host: "www.futbin.com",
+      selector: ".og-search-input",
+    },
+    {
+      host: "w.atwiki.jp",
+      selector: '.atwiki_headbar_search input[name="keyword"]',
+    },
+  ];
 
-	const asyncQuerySelector = (selector: string, timeout = 10000) => {
-		return new Promise<Element>((resolve, reject) => {
-			const interval = setInterval(() => {
-				const element = document.querySelector(selector);
-				if (element) {
-					clearInterval(interval);
-					resolve(element);
-				}
-			}, 500);
-			setTimeout(() => {
-				clearInterval(interval);
-				reject(new Error(`Timeout: ${selector}`));
-			}, timeout);
-		});
-	};
+  const asyncQuerySelector = (selector: string, timeout = 10000) => {
+    return new Promise<Element>((resolve, reject) => {
+      const interval = setInterval(() => {
+        const element = document.querySelector(selector);
+        if (element) {
+          clearInterval(interval);
+          resolve(element);
+        }
+      }, 500);
+      setTimeout(() => {
+        clearInterval(interval);
+        reject(new Error(`Timeout: ${selector}`));
+      }, timeout);
+    });
+  };
 
-	const getInputElement = async () => {
-		const item = dict.find((item) => location.hostname === item.host);
-		if (!item) {
-			return;
-		}
+  const getInputElement = async () => {
+    const item = dict.find((item) => location.hostname === item.host);
+    if (!item) {
+      return;
+    }
 
-		const elem = await asyncQuerySelector(item.selector);
-		if (!(elem instanceof HTMLInputElement)) {
-			return;
-		}
+    const elem = await asyncQuerySelector(item.selector);
+    if (!(elem instanceof HTMLInputElement)) {
+      return;
+    }
 
-		return elem;
-	};
+    return elem;
+  };
 
-	const searchInput = await getInputElement();
-	if (!searchInput) {
-		console.error("Input element not found.");
-		return;
-	}
+  const searchInput = await getInputElement();
+  if (!searchInput) {
+    console.error("Input element not found.");
+    return;
+  }
 
-	document.addEventListener("keydown", (e) => {
-		if (e.key !== "/") {
-			return;
-		}
+  document.addEventListener("keydown", (e) => {
+    if (e.key !== "/") {
+      return;
+    }
 
-		const activeElement = document.activeElement;
-		if ("INPUT" === activeElement?.tagName) {
-			return;
-		}
-		if ("TEXTAREA" === activeElement?.tagName) {
-			return;
-		}
+    const activeElement = document.activeElement;
+    if ("INPUT" === activeElement?.tagName) {
+      return;
+    }
+    if ("TEXTAREA" === activeElement?.tagName) {
+      return;
+    }
 
-		searchInput.click();
-		searchInput.focus();
-		e.preventDefault();
-	});
+    searchInput.click();
+    searchInput.focus();
+    e.preventDefault();
+  });
 })();

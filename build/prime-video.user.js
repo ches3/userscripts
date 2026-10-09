@@ -38,8 +38,7 @@
         }
         // 作品タイトルをページタイトルに設定
         const title = (await asyncQuerySelector("#dv-web-player h1")).textContent;
-        const subTitle = (await asyncQuerySelector("#dv-web-player h2"))
-            .textContent;
+        const subTitle = (await asyncQuerySelector("#dv-web-player h2")).textContent;
         if (title && subTitle) {
             document.title = `${title} ${subTitle} | Prime Video`;
         }
@@ -49,8 +48,7 @@
         // 次のエピソードへの自動遷移を無効化
         intervalId = setInterval(() => {
             const nextUpHideButton = document.querySelector(".atvwebplayersdk-nextupcardhide-button");
-            if (!nextUpHideButton ||
-                !(nextUpHideButton instanceof HTMLButtonElement)) {
+            if (!nextUpHideButton || !(nextUpHideButton instanceof HTMLButtonElement)) {
                 return;
             }
             nextUpHideButton.click();
