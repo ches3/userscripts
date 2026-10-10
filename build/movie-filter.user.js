@@ -2,7 +2,7 @@
 // ==UserScript==
 // @name         movie-filter
 // @namespace    https://ches3.me/
-// @version      2024-07-24
+// @version      2026-10-11
 // @description  https://github.com/ches3/userscripts#movie-filter
 // @homepageURL  https://github.com/ches3/userscripts#movie-filter
 // @author       ches3
@@ -113,6 +113,18 @@
         "魔法科高校の劣等生",
         "花緑青が明ける日に",
         "プロジェクト・ヘイル・メアリー",
+        "トイ・ストーリー",
+        "死亡遊戯で飯を食う",
+        "魔法少女まどか☆マギカ",
+        "君と花火と約束と",
+        "しらぬひ",
+        "グレイ・ミッション",
+        "シェルター",
+        "踊る大捜査線",
+        "縁の手紙",
+        "どこよりも遠い場所にいる君へ",
+        "前橋ウィッチーズ",
+        "GROTESQQQUE",
     ];
     const isInclude = (title) => {
         const normalizedTitle = title.normalize("NFKC");
