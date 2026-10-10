@@ -2,7 +2,8 @@
 // @name         Search Bar Shortcut
 // @namespace    https://ches3.me/
 // @version      2024-07-24
-// @description  "/"キーで検索バーにフォーカスする
+// @description  https://github.com/ches3/userscripts#search-bar-shortcut
+// @homepageURL  https://github.com/ches3/userscripts#search-bar-shortcut
 // @author       ches3
 // @match        https://*.wikipedia.org/*
 // @match        https://www.amazon.co.jp/*

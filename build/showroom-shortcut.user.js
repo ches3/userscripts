@@ -3,7 +3,8 @@
 // @name         showroom-shortcut
 // @namespace    https://ches3.me/
 // @version      2025-12-15
-// @description  SHOWROOMにショートカットキーを追加する
+// @description  https://github.com/ches3/userscripts#showroom-shortcut
+// @homepageURL  https://github.com/ches3/userscripts#showroom-shortcut
 // @author       ches3
 // @match        https://www.showroom-live.com/r/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=showroom-live.com

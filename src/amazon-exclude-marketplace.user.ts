@@ -2,7 +2,8 @@
 // @name         amazon-exclude-marketplace
 // @namespace    https://ches3.me/
 // @version      2024-07-24
-// @description  マーケットプレイスの商品を除外する
+// @description  https://github.com/ches3/userscripts#amazon-exclude-marketplace
+// @homepageURL  https://github.com/ches3/userscripts#amazon-exclude-marketplace
 // @author       ches3
 // @match        *://www.amazon.co.jp/s/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=www.amazon.co.jp

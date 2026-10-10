@@ -2,7 +2,8 @@
 // @name         mimorin-filter
 // @namespace    https://ches3.me/
 // @version      2025-12-28
-// @description  興行収入を見守りたい！の記事一覧をフィルタリング
+// @description  https://github.com/ches3/userscripts#mimorin-filter
+// @homepageURL  https://github.com/ches3/userscripts#mimorin-filter
 // @author       ches3
 // @match        *://mimorin2014.com/archives.html
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=mimorin2014.com

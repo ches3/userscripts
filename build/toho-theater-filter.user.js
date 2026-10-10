@@ -3,7 +3,8 @@
 // @name         toho-theater-filter
 // @namespace    https://ches3.me/
 // @version      2024-08-16
-// @description  TOHO THEATER LISTの上映館リストを絞り込む
+// @description  https://github.com/ches3/userscripts#toho-theater-filter
+// @homepageURL  https://github.com/ches3/userscripts#toho-theater-filter
 // @author       ches3
 // @match        https://theater.toho.co.jp/toho_theaterlist/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=theater.toho.co.jp

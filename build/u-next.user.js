@@ -3,7 +3,8 @@
 // @name         u-next
 // @namespace    https://ches3.me/
 // @version      2024-07-24
-// @description  U-NEXT関連
+// @description  https://github.com/ches3/userscripts#u-next
+// @homepageURL  https://github.com/ches3/userscripts#u-next
 // @author       ches3
 // @match        https://video.unext.jp/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=video.unext.jp

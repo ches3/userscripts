@@ -3,7 +3,8 @@
 // @name         imdb-ratings-csv
 // @namespace    https://ches3.me/
 // @version      2026-08-05
-// @description  IMDb の ratings history を CSV としてクリップボードにコピーする
+// @description  https://github.com/ches3/userscripts#imdb-ratings-csv
+// @homepageURL  https://github.com/ches3/userscripts#imdb-ratings-csv
 // @author       ches3
 // @match        https://www.imdb.com/user/*/ratings*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=imdb.com

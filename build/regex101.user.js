@@ -3,7 +3,8 @@
 // @name         regex101
 // @namespace    https://ches3.me/
 // @version      2026-07-02
-// @description  ページ離脱時の確認ダイアログを無効化する
+// @description  https://github.com/ches3/userscripts#regex101
+// @homepageURL  https://github.com/ches3/userscripts#regex101
 // @author       ches3
 // @match        https://regex101.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=regex101.com

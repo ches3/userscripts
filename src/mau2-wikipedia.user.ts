@@ -2,7 +2,8 @@
 // @name         mau2-wikipedia
 // @namespace    https://ches3.me/
 // @version      2024-11-22
-// @description  mau2.comの声優ページにWikipediaのリンクを追加する
+// @description  https://github.com/ches3/userscripts#mau2-wikipedia
+// @homepageURL  https://github.com/ches3/userscripts#mau2-wikipedia
 // @author       ches3
 // @match        https://www.mau2.com/voice/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=www.mau2.com

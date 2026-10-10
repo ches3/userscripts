@@ -2,7 +2,8 @@
 // @name         d-anime
 // @namespace    https://ches3.me/
 // @version      2024-07-24
-// @description  dアニメ関連
+// @description  https://github.com/ches3/userscripts#d-anime
+// @homepageURL  https://github.com/ches3/userscripts#d-anime
 // @author       ches3
 // @match        *://animestore.docomo.ne.jp/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=animestore.docomo.ne.jp

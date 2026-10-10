@@ -3,7 +3,8 @@
 // @name         prime-video
 // @namespace    https://ches3.me/
 // @version      2024-07-24
-// @description  Prime Video関連
+// @description  https://github.com/ches3/userscripts#prime-video
+// @homepageURL  https://github.com/ches3/userscripts#prime-video
 // @author       ches3
 // @match        https://www.amazon.co.jp/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=amazon.co.jp

@@ -3,7 +3,8 @@
 // @name         movie-filter
 // @namespace    https://ches3.me/
 // @version      2024-07-24
-// @description  映画館の予約サイトで作品を絞り込む
+// @description  https://github.com/ches3/userscripts#movie-filter
+// @homepageURL  https://github.com/ches3/userscripts#movie-filter
 // @author       ches3
 // @match        *://hlo.tohotheater.jp/*
 // @match        *://www.smt-cinema.com/*

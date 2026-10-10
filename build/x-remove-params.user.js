@@ -3,7 +3,8 @@
 // @name         x-remove-params
 // @namespace    https://ches3.me/
 // @version      2024-07-24
-// @description  ツイートページの余計なパラメータを削除する
+// @description  https://github.com/ches3/userscripts#x-remove-params
+// @homepageURL  https://github.com/ches3/userscripts#x-remove-params
 // @author       ches3
 // @match        https://x.com/*/status/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=x.com

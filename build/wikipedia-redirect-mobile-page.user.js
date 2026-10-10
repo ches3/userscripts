@@ -3,7 +3,8 @@
 // @name         wikipedia-redirect-mobile-page
 // @namespace    https://ches3.me/
 // @version      2024-07-28
-// @description  Wikipediaのモバイル版ページを通常版ページにリダイレクトする
+// @description  https://github.com/ches3/userscripts#wikipedia-redirect-mobile-page
+// @homepageURL  https://github.com/ches3/userscripts#wikipedia-redirect-mobile-page
 // @author       ches3
 // @match        https://*.m.wikipedia.org/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=wikipedia.org

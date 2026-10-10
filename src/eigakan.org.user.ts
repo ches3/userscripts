@@ -2,7 +2,8 @@
 // @name         eigakan.org
 // @namespace    https://ches3.me/
 // @version      2024-07-24
-// @description  eigakan.orgの上映館リストを絞り込む
+// @description  https://github.com/ches3/userscripts#eigakanorg
+// @homepageURL  https://github.com/ches3/userscripts#eigakanorg
 // @author       ches3
 // @match        *://eigakan.org/theaterpage/schedule.php*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=eigakan.org

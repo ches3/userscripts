@@ -3,7 +3,8 @@
 // @name         mimorin-formatter
 // @namespace    https://ches3.me/
 // @version      2025-12-14
-// @description  興行収入を見守りたい！のランキング表示を整形する
+// @description  https://github.com/ches3/userscripts#mimorin-formatter
+// @homepageURL  https://github.com/ches3/userscripts#mimorin-formatter
 // @author       ches3
 // @match        *://mimorin2014.com/blog-entry-*.html
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=mimorin2014.com
