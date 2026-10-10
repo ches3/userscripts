@@ -128,8 +128,8 @@
     const items = await asyncQuerySelectorAll(workSelector);
 
     for (const item of items) {
-      const item_title = item.querySelector(titleSelector)?.textContent;
-      if (!item_title) {
+      const item_title = item.querySelector(titleSelector)?.textContent ?? "";
+      if (item_title === "") {
         continue;
       }
       if (isInclude(item_title)) {
@@ -193,7 +193,7 @@
     return new Promise<NodeListOf<Element>>((resolve, reject) => {
       const intervalID = setInterval(() => {
         const elements = document.querySelectorAll(selector);
-        if (elements && elements.length > 0) {
+        if (elements.length > 0) {
           clearInterval(intervalID);
           resolve(elements);
         }
@@ -292,14 +292,18 @@
     return;
   }
 
-  addFilterAttribute(theater.workSelector, theater.titleSelector);
+  addFilterAttribute(theater.workSelector, theater.titleSelector).catch((error: unknown) => {
+    console.error("movie-filter: failed to apply filter", error);
+  });
   appendStyle();
 
-  if (theater.mutationSelector) {
+  if (theater.mutationSelector !== undefined && theater.mutationSelector !== "") {
     const target = await asyncQuerySelector(theater.mutationSelector);
     const observer = new MutationObserver(() => {
       setFilter(false);
-      addFilterAttribute(theater.workSelector, theater.titleSelector);
+      addFilterAttribute(theater.workSelector, theater.titleSelector).catch((error: unknown) => {
+        console.error("movie-filter: failed to update filter", error);
+      });
     });
     observer.observe(target, {
       childList: true,
@@ -315,4 +319,6 @@
       }
     }
   });
-})();
+})().catch((error: unknown) => {
+  console.error("movie-filter: failed to initialize", error);
+});

@@ -149,8 +149,8 @@
     const theaterElemList = document.querySelectorAll("#region3 table tbody tr");
 
     for (const theaterElem of theaterElemList) {
-      const item_title = theaterElem.querySelector("a")?.textContent;
-      if (!item_title) {
+      const item_title = theaterElem.querySelector("a")?.textContent ?? "";
+      if (item_title === "") {
         continue;
       }
 

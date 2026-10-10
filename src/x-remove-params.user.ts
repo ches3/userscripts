@@ -14,7 +14,12 @@
   const removeParams = ["t", "s", "ref_src", "ref_url"];
 
   const searchParams = new URLSearchParams(location.search);
-  if (!removeParams.some((param) => searchParams.get(param))) {
+  if (
+    !removeParams.some((param) => {
+      const value = searchParams.get(param);
+      return value !== null && value !== "";
+    })
+  ) {
     return;
   }
 

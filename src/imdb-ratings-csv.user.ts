@@ -51,23 +51,23 @@
       return null;
     }
 
-    const titleRaw = item.querySelector(".ipc-title__text")?.textContent?.trim() ?? "";
+    const titleRaw = item.querySelector(".ipc-title__text")?.textContent.trim() ?? "";
     const title = titleRaw.replace(/^\d+\.\s*/, "");
 
     const ratedOn =
       item
         .querySelector(".dli-user-list-item-date-added")
-        ?.textContent?.trim()
+        ?.textContent.trim()
         .replace(/^Rated on\s*/i, "") ?? "";
 
     const meta = [...item.querySelectorAll("ul.ipc-inline-list li.ipc-inline-list__item")].map(
-      (el) => el.textContent?.trim() ?? "",
+      (el) => el.textContent.trim(),
     );
 
     const imdbRatingEl = item.querySelector('[data-testid="ratingGroup--imdb-rating"]');
     const imdbRating =
       imdbRatingEl?.getAttribute("aria-label")?.match(/IMDb rating:\s*([\d.]+)/i)?.[1] ??
-      imdbRatingEl?.querySelector(".ipc-rating-star--rating")?.textContent?.trim() ??
+      imdbRatingEl?.querySelector(".ipc-rating-star--rating")?.textContent.trim() ??
       "";
 
     const myRating =
@@ -80,12 +80,12 @@
     const nameLinks = [...item.querySelectorAll<HTMLAnchorElement>('a[href*="/name/"]')];
     const directors = nameLinks
       .filter((a) => /ref_=rt_li_1_/.test(a.getAttribute("href") ?? ""))
-      .map((a) => a.textContent?.trim() ?? "")
+      .map((a) => a.textContent.trim())
       .filter(Boolean)
       .join("; ");
     const actors = nameLinks
       .filter((a) => /ref_=rt_li_2_/.test(a.getAttribute("href") ?? ""))
-      .map((a) => a.textContent?.trim() ?? "")
+      .map((a) => a.textContent.trim())
       .filter(Boolean)
       .join("; ");
 
@@ -168,7 +168,7 @@
 	`;
   document.head.appendChild(style);
 
-  button.addEventListener("click", async () => {
+  const copyRatings = async () => {
     const rows = collectRows();
     const csv = toCsv(rows);
     try {
@@ -184,6 +184,12 @@
         button.textContent = "Copy CSV";
       }, 1500);
     }
+  };
+
+  button.addEventListener("click", () => {
+    copyRatings().catch((error: unknown) => {
+      console.error("imdb-ratings-csv: failed to collect ratings", error);
+    });
   });
 
   sortContainer.parentElement.insertBefore(button, sortContainer);

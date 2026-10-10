@@ -16,10 +16,14 @@
             return;
         }
         if (document.fullscreenElement) {
-            document.exitFullscreen();
+            document.exitFullscreen().catch((error) => {
+                console.error("showroom-shortcut: failed to exit fullscreen", error);
+            });
         }
         else {
-            video.requestFullscreen();
+            video.requestFullscreen().catch((error) => {
+                console.error("showroom-shortcut: failed to enter fullscreen", error);
+            });
         }
     }
     function toggleMute() {
@@ -35,7 +39,9 @@
             return;
         }
         if (video.paused) {
-            video.play();
+            video.play().catch((error) => {
+                console.error("showroom-shortcut: failed to play video", error);
+            });
         }
         else {
             video.pause();

@@ -128,8 +128,8 @@
     const theaterElemList = document.querySelectorAll(".theater_list table tbody tr");
 
     for (const theaterElem of theaterElemList) {
-      const item_title = theaterElem.querySelector(".theater_name")?.textContent;
-      if (!item_title) {
+      const item_title = theaterElem.querySelector(".theater_name")?.textContent ?? "";
+      if (item_title === "") {
         continue;
       }
 

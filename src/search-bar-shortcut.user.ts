@@ -145,4 +145,6 @@
     searchInput.focus();
     e.preventDefault();
   });
-})();
+})().catch((error: unknown) => {
+  console.error("search-bar-shortcut: failed to initialize", error);
+});

@@ -29,7 +29,7 @@
       const link = item.querySelector("a");
       if (!link) continue;
 
-      const title = link.textContent?.trim() || "";
+      const title = link.textContent.trim();
       const matches = patterns.some((pattern) => pattern.test(title));
 
       if (isFiltered) {

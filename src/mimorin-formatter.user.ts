@@ -22,6 +22,7 @@
 
   const formatRankingLine = (line: string): string | null => {
     // ランキング行のパターン:
+    // eslint-disable-next-line no-irregular-whitespace -- 元データの区切りである全角スペースを保持する
     // *1　429608　848987　2931　278　100.5%　ズートピア２
     // 順位 販売数  座席数  回数 館数 先週比  映画名
     const pattern = /^([*\d]+)\s+([*\d]+)\s+([*\d]+)\s+([*\d]+)\s+([*\d]+)\s+([*\d.%]+)\s+(.+)$/;
@@ -83,7 +84,7 @@
 
       // データ行を整形
       const formatted = formatRankingLine(trimmed);
-      if (formatted) {
+      if (formatted !== null) {
         formattedLines.push(formatted);
       }
     }

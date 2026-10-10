@@ -23,6 +23,17 @@ const getUrl = async (title) => {
         return;
     }
     const json = await res.json();
+    if (typeof json !== "object" ||
+        json === null ||
+        !("query" in json) ||
+        typeof json.query !== "object" ||
+        json.query === null ||
+        !("pages" in json.query) ||
+        typeof json.query.pages !== "object" ||
+        json.query.pages === null ||
+        Array.isArray(json.query.pages)) {
+        throw new Error("Unexpected Wikipedia API response: query.pages must be an object");
+    }
     if ("-1" in json.query.pages) {
         return;
     }
@@ -47,12 +58,12 @@ const createElement = (href) => {
 };
 (async () => {
     // URLを取得
-    const name = document.querySelector("h1")?.textContent;
-    if (!name) {
+    const name = document.querySelector("h1")?.textContent ?? "";
+    if (name === "") {
         return;
     }
-    const href = (await getUrl(`${name} (声優)`)) || (await getUrl(name));
-    if (!href) {
+    const href = (await getUrl(`${name} (声優)`)) ?? (await getUrl(name));
+    if (href === undefined) {
         return;
     }
     // 要素を挿入
@@ -66,4 +77,6 @@ const createElement = (href) => {
         return;
     }
     parentElem.insertBefore(elem, birthdayElem);
-})();
+})().catch((error) => {
+    console.error("mau2-wikipedia: failed to add Wikipedia link", error);
+});

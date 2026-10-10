@@ -27,12 +27,9 @@
   };
 
   const playerElem = await asyncQuerySelector("#dv-web-player");
-  if (!playerElem) {
-    return;
-  }
 
   let intervalId: number;
-  const observer = new MutationObserver(async () => {
+  const updatePlayer = async () => {
     if (!playerElem.classList.contains("dv-player-fullscreen")) {
       document.title = "Prime Video";
       clearInterval(intervalId);
@@ -56,8 +53,15 @@
       }
       nextUpHideButton.click();
     }, 1000);
+  };
+  const observer = new MutationObserver(() => {
+    updatePlayer().catch((error: unknown) => {
+      console.error("prime-video: failed to update player", error);
+    });
   });
   observer.observe(playerElem, {
     attributes: true,
   });
-})();
+})().catch((error: unknown) => {
+  console.error("prime-video: failed to initialize", error);
+});

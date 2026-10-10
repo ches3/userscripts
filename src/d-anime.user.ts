@@ -37,15 +37,16 @@
       });
     }
 
-    const titleElem = await asyncQuerySelector(".pauseInfoTxt1").catch((err) => console.error(err));
-    if (titleElem) {
-      document.title = `${titleElem.innerHTML} - d-anime`;
-    }
+    const titleElem = await asyncQuerySelector(".pauseInfoTxt1");
+    document.title = `${titleElem.innerHTML} - d-anime`;
   } else if (location.pathname === "/animestore/mp_viw_pc") {
     // マイページ
     const linkElems = document.querySelectorAll("div.thumbnailContainer > a");
     for (const elem of linkElems) {
-      const partId = elem.getAttribute("onclick")?.match(/\d+/);
+      const partId = elem.getAttribute("onclick")?.match(/\d+/)?.[0];
+      if (partId === undefined) {
+        continue;
+      }
       elem.setAttribute("href", `https://anime.dmkt-sp.jp/animestore/sc_d_pc?partId=${partId}`);
       elem.removeAttribute("onclick");
     }
@@ -53,7 +54,10 @@
     // 作品ページ
     const linkElems = document.querySelectorAll("section.clearfix > a.clearfix");
     for (const elem of linkElems) {
-      const partId = elem.getAttribute("id")?.match(/\d+/);
+      const partId = elem.getAttribute("id")?.match(/\d+/)?.[0];
+      if (partId === undefined) {
+        continue;
+      }
       elem.setAttribute("href", `https://anime.dmkt-sp.jp/animestore/sc_d_pc?partId=${partId}`);
     }
     // setInterval(() => {
@@ -84,4 +88,6 @@
     // 		);
     // }, 1000);
   }
-})();
+})().catch((error: unknown) => {
+  console.error("d-anime: failed to initialize", error);
+});
