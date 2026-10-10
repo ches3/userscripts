@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Search Bar Shortcut
 // @namespace    https://ches3.me/
-// @version      2024-07-24
+// @version      2026-10-10
 // @description  https://github.com/ches3/userscripts#search-bar-shortcut
 // @homepageURL  https://github.com/ches3/userscripts#search-bar-shortcut
 // @author       ches3
@@ -139,6 +139,9 @@
       return;
     }
     if ("TEXTAREA" === activeElement?.tagName) {
+      return;
+    }
+    if ("textbox" === activeElement?.getAttribute("role")) {
       return;
     }
 
