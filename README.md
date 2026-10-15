@@ -4,7 +4,7 @@
 
 ### amazon-exclude-marketplace
 
-[インストール](https://github.com/ches3/userscripts/raw/main/build/amazon-exclude-marketplace.user.js)
+[インストール](https://ches3.github.io/userscripts/amazon-exclude-marketplace.user.js)
 
 | 対象サイト   | URL                                           |
 | ------------ | --------------------------------------------- |
@@ -14,7 +14,7 @@
 
 ### d-anime
 
-[インストール](https://github.com/ches3/userscripts/raw/main/build/d-anime.user.js)
+[インストール](https://ches3.github.io/userscripts/d-anime.user.js)
 
 | 対象サイト    | URL                                                         |
 | ------------- | ----------------------------------------------------------- |
@@ -27,7 +27,7 @@
 
 ### dmmtv
 
-[インストール](https://github.com/ches3/userscripts/raw/main/build/dmmtv.user.js)
+[インストール](https://ches3.github.io/userscripts/dmmtv.user.js)
 
 | 対象サイト | URL                               |
 | ---------- | --------------------------------- |
@@ -37,7 +37,7 @@
 
 ### eigakan.org
 
-[インストール](https://github.com/ches3/userscripts/raw/main/build/eigakan.org.user.js)
+[インストール](https://ches3.github.io/userscripts/eigakan.org.user.js)
 
 | 対象サイト       | URL                                 |
 | ---------------- | ----------------------------------- |
@@ -48,7 +48,7 @@
 
 ### imdb-ratings-csv
 
-[インストール](https://github.com/ches3/userscripts/raw/main/build/imdb-ratings-csv.user.js)
+[インストール](https://ches3.github.io/userscripts/imdb-ratings-csv.user.js)
 
 | 対象サイト | URL                                   |
 | ---------- | ------------------------------------- |
@@ -58,7 +58,7 @@
 
 ### mau2-wikipedia
 
-[インストール](https://github.com/ches3/userscripts/raw/main/build/mau2-wikipedia.user.js)
+[インストール](https://ches3.github.io/userscripts/mau2-wikipedia.user.js)
 
 | 対象サイト | URL                                   |
 | ---------- | ------------------------------------- |
@@ -68,7 +68,7 @@
 
 ### mimorin-filter
 
-[インストール](https://github.com/ches3/userscripts/raw/main/build/mimorin-filter.user.js)
+[インストール](https://ches3.github.io/userscripts/mimorin-filter.user.js)
 
 | 対象サイト             | URL                                         |
 | ---------------------- | ------------------------------------------- |
@@ -78,7 +78,7 @@
 
 ### mimorin-formatter
 
-[インストール](https://github.com/ches3/userscripts/raw/main/build/mimorin-formatter.user.js)
+[インストール](https://ches3.github.io/userscripts/mimorin-formatter.user.js)
 
 | 対象サイト             | URL                                         |
 | ---------------------- | ------------------------------------------- |
@@ -88,7 +88,7 @@
 
 ### movie-filter
 
-[インストール](https://github.com/ches3/userscripts/raw/main/build/movie-filter.user.js)
+[インストール](https://ches3.github.io/userscripts/movie-filter.user.js)
 
 | 対象サイト                     | URL                                                                                                  |
 | ------------------------------ | ---------------------------------------------------------------------------------------------------- |
@@ -109,7 +109,7 @@
 
 ### prime-video
 
-[インストール](https://github.com/ches3/userscripts/raw/main/build/prime-video.user.js)
+[インストール](https://ches3.github.io/userscripts/prime-video.user.js)
 
 | 対象サイト  | URL                                           |
 | ----------- | --------------------------------------------- |
@@ -120,7 +120,7 @@
 
 ### regex101
 
-[インストール](https://github.com/ches3/userscripts/raw/main/build/regex101.user.js)
+[インストール](https://ches3.github.io/userscripts/regex101.user.js)
 
 | 対象サイト | URL                                   |
 | ---------- | ------------------------------------- |
@@ -130,7 +130,7 @@
 
 ### search-bar-shortcut
 
-[インストール](https://github.com/ches3/userscripts/raw/main/build/search-bar-shortcut.user.js)
+[インストール](https://ches3.github.io/userscripts/search-bar-shortcut.user.js)
 
 | 対象サイト       | URL                                             |
 | ---------------- | ----------------------------------------------- |
@@ -155,7 +155,7 @@
 
 ### showroom-shortcut
 
-[インストール](https://github.com/ches3/userscripts/raw/main/build/showroom-shortcut.user.js)
+[インストール](https://ches3.github.io/userscripts/showroom-shortcut.user.js)
 
 | 対象サイト | URL                                                     |
 | ---------- | ------------------------------------------------------- |
@@ -168,7 +168,7 @@
 
 ### toho-theater-filter
 
-[インストール](https://github.com/ches3/userscripts/raw/main/build/toho-theater-filter.user.js)
+[インストール](https://ches3.github.io/userscripts/toho-theater-filter.user.js)
 
 | 対象サイト               | URL                                                                                 |
 | ------------------------ | ----------------------------------------------------------------------------------- |
@@ -179,7 +179,7 @@
 
 ### u-next
 
-[インストール](https://github.com/ches3/userscripts/raw/main/build/u-next.user.js)
+[インストール](https://ches3.github.io/userscripts/u-next.user.js)
 
 | 対象サイト | URL                                       |
 | ---------- | ----------------------------------------- |
@@ -191,7 +191,7 @@
 
 ### wikipedia-redirect-mobile-page
 
-[インストール](https://github.com/ches3/userscripts/raw/main/build/wikipedia-redirect-mobile-page.user.js)
+[インストール](https://ches3.github.io/userscripts/wikipedia-redirect-mobile-page.user.js)
 
 | 対象サイト              | URL                                               |
 | ----------------------- | ------------------------------------------------- |
@@ -201,7 +201,7 @@
 
 ### x-remove-params
 
-[インストール](https://github.com/ches3/userscripts/raw/main/build/x-remove-params.user.js)
+[インストール](https://ches3.github.io/userscripts/x-remove-params.user.js)
 
 | 対象サイト | URL                     |
 | ---------- | ----------------------- |
