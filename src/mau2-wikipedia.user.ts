@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         mau2-wikipedia
 // @namespace    https://ches3.me/
-// @version      2024-11-22
+// @version      2024.11.22.0
 // @description  https://github.com/ches3/userscripts#mau2-wikipedia
 // @homepageURL  https://github.com/ches3/userscripts#mau2-wikipedia
 // @author       ches3

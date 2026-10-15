@@ -2,7 +2,7 @@
 // ==UserScript==
 // @name         mimorin-filter
 // @namespace    https://ches3.me/
-// @version      2025-12-28
+// @version      2025.12.28.0
 // @description  https://github.com/ches3/userscripts#mimorin-filter
 // @homepageURL  https://github.com/ches3/userscripts#mimorin-filter
 // @author       ches3

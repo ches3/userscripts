@@ -2,7 +2,7 @@
 // ==UserScript==
 // @name         movie-filter
 // @namespace    https://ches3.me/
-// @version      2026-10-11
+// @version      2026.10.11.0
 // @description  https://github.com/ches3/userscripts#movie-filter
 // @homepageURL  https://github.com/ches3/userscripts#movie-filter
 // @author       ches3

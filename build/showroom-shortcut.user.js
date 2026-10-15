@@ -2,7 +2,7 @@
 // ==UserScript==
 // @name         showroom-shortcut
 // @namespace    https://ches3.me/
-// @version      2025-12-15
+// @version      2025.12.15.0
 // @description  https://github.com/ches3/userscripts#showroom-shortcut
 // @homepageURL  https://github.com/ches3/userscripts#showroom-shortcut
 // @author       ches3

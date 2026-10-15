@@ -2,7 +2,7 @@
 // ==UserScript==
 // @name         regex101
 // @namespace    https://ches3.me/
-// @version      2026-07-02
+// @version      2026.07.02.0
 // @description  https://github.com/ches3/userscripts#regex101
 // @homepageURL  https://github.com/ches3/userscripts#regex101
 // @author       ches3

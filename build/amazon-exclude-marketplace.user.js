@@ -2,7 +2,7 @@
 // ==UserScript==
 // @name         amazon-exclude-marketplace
 // @namespace    https://ches3.me/
-// @version      2024-07-24
+// @version      2024.07.24.0
 // @description  https://github.com/ches3/userscripts#amazon-exclude-marketplace
 // @homepageURL  https://github.com/ches3/userscripts#amazon-exclude-marketplace
 // @author       ches3

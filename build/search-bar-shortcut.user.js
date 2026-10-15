@@ -2,7 +2,7 @@
 // ==UserScript==
 // @name         Search Bar Shortcut
 // @namespace    https://ches3.me/
-// @version      2026-10-10
+// @version      2026.10.10.0
 // @description  https://github.com/ches3/userscripts#search-bar-shortcut
 // @homepageURL  https://github.com/ches3/userscripts#search-bar-shortcut
 // @author       ches3

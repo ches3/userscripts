@@ -2,7 +2,7 @@
 // ==UserScript==
 // @name         d-anime
 // @namespace    https://ches3.me/
-// @version      2024-07-24
+// @version      2024.07.24.0
 // @description  https://github.com/ches3/userscripts#d-anime
 // @homepageURL  https://github.com/ches3/userscripts#d-anime
 // @author       ches3

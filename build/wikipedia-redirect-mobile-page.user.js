@@ -2,7 +2,7 @@
 // ==UserScript==
 // @name         wikipedia-redirect-mobile-page
 // @namespace    https://ches3.me/
-// @version      2024-07-28
+// @version      2024.07.28.0
 // @description  https://github.com/ches3/userscripts#wikipedia-redirect-mobile-page
 // @homepageURL  https://github.com/ches3/userscripts#wikipedia-redirect-mobile-page
 // @author       ches3

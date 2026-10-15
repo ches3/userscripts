@@ -2,7 +2,7 @@
 // ==UserScript==
 // @name         prime-video
 // @namespace    https://ches3.me/
-// @version      2024-07-24
+// @version      2024.07.24.0
 // @description  https://github.com/ches3/userscripts#prime-video
 // @homepageURL  https://github.com/ches3/userscripts#prime-video
 // @author       ches3

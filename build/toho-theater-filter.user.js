@@ -2,7 +2,7 @@
 // ==UserScript==
 // @name         toho-theater-filter
 // @namespace    https://ches3.me/
-// @version      2024-08-16
+// @version      2024.08.16.0
 // @description  https://github.com/ches3/userscripts#toho-theater-filter
 // @homepageURL  https://github.com/ches3/userscripts#toho-theater-filter
 // @author       ches3

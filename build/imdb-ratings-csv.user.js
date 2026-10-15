@@ -2,7 +2,7 @@
 // ==UserScript==
 // @name         imdb-ratings-csv
 // @namespace    https://ches3.me/
-// @version      2026-08-05
+// @version      2026.08.05.0
 // @description  https://github.com/ches3/userscripts#imdb-ratings-csv
 // @homepageURL  https://github.com/ches3/userscripts#imdb-ratings-csv
 // @author       ches3

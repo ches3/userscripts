@@ -2,7 +2,7 @@
 // ==UserScript==
 // @name         mimorin-formatter
 // @namespace    https://ches3.me/
-// @version      2025-12-14
+// @version      2025.12.14.0
 // @description  https://github.com/ches3/userscripts#mimorin-formatter
 // @homepageURL  https://github.com/ches3/userscripts#mimorin-formatter
 // @author       ches3

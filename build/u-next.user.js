@@ -2,7 +2,7 @@
 // ==UserScript==
 // @name         u-next
 // @namespace    https://ches3.me/
-// @version      2024-07-24
+// @version      2024.07.24.0
 // @description  https://github.com/ches3/userscripts#u-next
 // @homepageURL  https://github.com/ches3/userscripts#u-next
 // @author       ches3

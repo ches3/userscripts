@@ -2,7 +2,7 @@
 // ==UserScript==
 // @name         x-remove-params
 // @namespace    https://ches3.me/
-// @version      2024-07-24
+// @version      2024.07.24.0
 // @description  https://github.com/ches3/userscripts#x-remove-params
 // @homepageURL  https://github.com/ches3/userscripts#x-remove-params
 // @author       ches3

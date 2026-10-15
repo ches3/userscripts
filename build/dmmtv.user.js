@@ -2,7 +2,7 @@
 // ==UserScript==
 // @name         DMM TV
 // @namespace    https://ches3.me/
-// @version      2024-11-04
+// @version      2024.11.04.0
 // @description  https://github.com/ches3/userscripts#dmmtv
 // @homepageURL  https://github.com/ches3/userscripts#dmmtv
 // @author       ches3
