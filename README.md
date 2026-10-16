@@ -118,6 +118,17 @@
 
 - <kbd>Ctrl</kbd> + <kbd>Q</kbd> で映画館のスケジュールページ上の作品を絞り込む
 
+### novel-manga-page-turn
+
+[インストール](https://ches3.github.io/userscripts/novel-manga-page-turn.user.js)
+
+| 対象サイト | URL                                     |
+| ---------- | --------------------------------------- |
+| pixiv      | [www.pixiv.net](https://www.pixiv.net/) |
+| カクヨム   | [kakuyomu.jp](https://kakuyomu.jp/)     |
+
+- <kbd>PageUp</kbd> / <kbd>PageDown</kbd> でページ送り
+
 ### prime-video
 
 [インストール](https://ches3.github.io/userscripts/prime-video.user.js)
