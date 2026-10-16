@@ -16,8 +16,8 @@
 
 [インストール](https://ches3.github.io/userscripts/annict-twitter-link.user.js)
 
-| 対象サイト | URL                             |
-| ---------- | ------------------------------- |
+| 対象サイト | URL                               |
+| ---------- | --------------------------------- |
 | Annict     | [annict.com](https://annict.com/) |
 
 - 作品ページにTwitterのリンクを追加
@@ -230,3 +230,13 @@
 | X          | [x.com](https://x.com/) |
 
 - ツイートページの余計なパラメータを削除する
+
+### youtube-subscriptions-to-videos
+
+[インストール](https://ches3.github.io/userscripts/youtube-subscriptions-to-videos.user.js)
+
+| 対象サイト | URL                                         |
+| ---------- | ------------------------------------------- |
+| YouTube    | [www.youtube.com](https://www.youtube.com/) |
+
+- サイドバーの登録チャンネルクリック時、チャンネルのホームではなく動画一覧ページを開く
