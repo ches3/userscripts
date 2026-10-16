@@ -111,7 +111,7 @@
 | シネマサンシャイン             | [www.cinemasunshine.co.jp](https://www.cinemasunshine.co.jp/)                                        |
 | 109シネマズ                    | [109cinemas.net](https://109cinemas.net/)                                                            |
 | ユナイテッド・シネマ           | [www.unitedcinemas.jp](https://www.unitedcinemas.jp/)                                                |
-| イオンシネマ                   | [cinema.aeoncinema.com](https://cinema.aeoncinema.com/)                                              |
+| イオンシネマ                   | [theater.aeoncinema.com](https://theater.aeoncinema.com/)                                            |
 | コロナシネマワールド           | [cinema.korona.co.jp](https://cinema.korona.co.jp/)                                                  |
 | シネクイント                   | [www.cinequinto-ticket.jp](https://www.cinequinto-ticket.jp/)                                        |
 | 京成ローザ⑩                    | [rosa10.cineticket.jp/theater/keisei/schedule](https://rosa10.cineticket.jp/theater/keisei/schedule) |

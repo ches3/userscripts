@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         movie-filter
 // @namespace    https://ches3.me/
-// @version      2026.10.11.0
+// @version      2026.10.16.0
 // @description  https://github.com/ches3/userscripts#movie-filter
 // @homepageURL  https://github.com/ches3/userscripts#movie-filter
 // @author       ches3
@@ -13,7 +13,7 @@
 // @match        *://www.cinemasunshine.co.jp/*
 // @match        *://109cinemas.net/*
 // @match        *://www.unitedcinemas.jp/*
-// @match        *://cinema.aeoncinema.com/*
+// @match        *://theater.aeoncinema.com/theaters/*
 // @match        *://cinema.korona.co.jp/*
 // @match        *://www.cinequinto-ticket.jp/*
 // @match				 *://rosa10.cineticket.jp/theater/keisei/schedule*
@@ -274,9 +274,10 @@
       functions: [],
     },
     {
-      host: "cinema.aeoncinema.com",
-      workSelector: ".movielist",
-      titleSelector: "div.title > p > a",
+      host: "theater.aeoncinema.com",
+      mutationSelector: "#smart-portal-schedules",
+      workSelector: ".p-schedule__movies .p-schedule__movie",
+      titleSelector: ".p-schedule__titleJp h2",
       functions: [],
     },
     {
