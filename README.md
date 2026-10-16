@@ -12,6 +12,17 @@
 
 - <kbd>Ctrl</kbd> + <kbd>Q</kbd> で検索結果からマーケットプレイス商品を除外する
 
+### annict-twitter-link
+
+[インストール](https://ches3.github.io/userscripts/annict-twitter-link.user.js)
+
+| 対象サイト | URL                             |
+| ---------- | ------------------------------- |
+| Annict     | [annict.com](https://annict.com/) |
+
+- 作品ページにTwitterのリンクを追加
+- ポップアップメニューからAnnictトークンを設定
+
 ### d-anime
 
 [インストール](https://ches3.github.io/userscripts/d-anime.user.js)
