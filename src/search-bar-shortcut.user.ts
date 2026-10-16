@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Search Bar Shortcut
 // @namespace    https://ches3.me/
-// @version      2026.10.10.0
+// @version      2026.10.16.0
 // @description  https://github.com/ches3/userscripts#search-bar-shortcut
 // @homepageURL  https://github.com/ches3/userscripts#search-bar-shortcut
 // @author       ches3
@@ -9,7 +9,7 @@
 // @match        https://www.amazon.co.jp/*
 // @match        https://www.amazon.com/*
 // @match        https://mail.google.com/*
-// @match        http://ruijianime.com//*
+// @match        http://ruijianime.com/*
 // @match        https://video.unext.jp/*
 // @match        https://sm.rakuten.co.jp/*
 // @match        https://www.rakuten.co.jp/*
